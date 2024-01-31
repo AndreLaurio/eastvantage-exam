@@ -68,7 +68,7 @@ const App = () => {
                 onClick={(e) => getUser()}
                 loading={btnLoading}
             >
-                {!user ? '' : 'Refresh'}
+                Refresh
             </Button>
         </div>
     )
