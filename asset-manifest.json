@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/eastvantage-exam/static/css/main.12af031c.css",
+    "main.js": "/eastvantage-exam/static/js/main.b47cad54.js",
+    "static/js/787.ae494246.chunk.js": "/eastvantage-exam/static/js/787.ae494246.chunk.js",
+    "index.html": "/eastvantage-exam/index.html",
+    "main.12af031c.css.map": "/eastvantage-exam/static/css/main.12af031c.css.map",
+    "main.b47cad54.js.map": "/eastvantage-exam/static/js/main.b47cad54.js.map",
+    "787.ae494246.chunk.js.map": "/eastvantage-exam/static/js/787.ae494246.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12af031c.css",
+    "static/js/main.b47cad54.js"
+  ]
+}
