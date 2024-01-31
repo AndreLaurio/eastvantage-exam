@@ -4,7 +4,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-## When the project is cloned
 ### `npm install`
 To install the packages needed for the project.
 
