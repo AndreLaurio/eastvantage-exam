@@ -7,6 +7,7 @@ import { TbMapPin } from "react-icons/tb";
 import { TbUserSquare } from "react-icons/tb";
 import { TbCake } from "react-icons/tb";
 import Icon from './Icon';
+import _ from 'lodash'
 
 interface ICardProfileProps {
     data: IUser
@@ -18,10 +19,10 @@ const CardProfile: React.FC<ICardProfileProps> = ({data}) => {
             {/* First Half */}
             <div className='bg-[#F9F9F9]'>
                 <div className='flex justify-center'>
-                    <img src={data.picture.large} className="rounded-full w-[250px] -mt-[125px]"/>
+                    <img src={_.get(data, 'picture.large', '')} className="rounded-full w-[250px] -mt-[125px]"/>
                 </div>
                 <div className='py-[25px] text-center text-[#000000] sm:text-[40px] font-[600] leading-[47.4px]'>
-                    {data.name.title} {data.name.first} {data.name.last}
+                    {_.get(data, 'name.title', 'N/A')} {_.get(data, 'name.first', 'N/A')} {_.get(data, 'name.last', 'N/A')}
                 </div>
             </div>
             {/* Second Half */}
@@ -39,7 +40,7 @@ const CardProfile: React.FC<ICardProfileProps> = ({data}) => {
                                     backgroundColor={'#FFEBCD'}
                                 />
                                 <span className='capitalize ml-[20px]'>
-                                    {data.gender}
+                                    {_.get(data, 'gender', 'N/A')}
                                 </span>
                             </div>
                             <div className='flex items-center mt-[15px]'>
@@ -48,7 +49,7 @@ const CardProfile: React.FC<ICardProfileProps> = ({data}) => {
                                     backgroundColor={'#E1FFE4'}
                                 />
                                 <span className='ml-[20px]'>
-                                    {moment(data.dob.date).format('LL')}
+                                    {moment(_.get(data, 'dob.date', 'N/A')).format('LL')}
                                 </span>
                             </div>
                         </div>
@@ -64,7 +65,7 @@ const CardProfile: React.FC<ICardProfileProps> = ({data}) => {
                                     backgroundColor={'#FFE4E4'}
                                 />
                                 <span className='ml-[20px]'>
-                                    {data.phone}
+                                    {_.get(data, 'phone', 'N/A')}
                                 </span>
                             </div>
                             <div className='flex items-center mt-[15px]'>
@@ -73,7 +74,7 @@ const CardProfile: React.FC<ICardProfileProps> = ({data}) => {
                                     backgroundColor={'#EEE0FF'}
                                 />
                                 <span className='ml-[20px]'>
-                                    {data.email}
+                                    {_.get(data, 'email', 'N/A')}
                                 </span>
                             </div>
                         </div>
@@ -85,7 +86,7 @@ const CardProfile: React.FC<ICardProfileProps> = ({data}) => {
                         backgroundColor={'#DFE6FF'}
                     />
                     <span className='ml-[20px]'>
-                        {data.location.street.number} {data.location.street.name} {data.location.city} {data.location.country}
+                        {_.get(data, 'location.street.number', 'N/A')} {_.get(data, 'location.street.name', 'N/A')} {_.get(data, 'location.city', 'N/A')} {_.get(data, 'location.country', 'N/A')}
                     </span>
                 </div>
             </div>
